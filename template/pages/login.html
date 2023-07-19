@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<body class="body">
+    
+    <div class="container">
+    <h3>Login </h3>
+
+        <form action="" method="'POST">
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="email" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Password</label>
+                <input type="email" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+                  <p class="p">Create new account <a href="{% url 'signup' %}">Signup</a> here</p>
+                  <div class="mb-3 button">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+               
+            </form> 
+        </div>
+     
+ 
+{% endblock %}

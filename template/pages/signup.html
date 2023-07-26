@@ -5,30 +5,31 @@
     
     <div class="container">
     <h3>Sign up </h3>
-
-        <form action="{% url 'signup' %}" method="POST">
+    <form action="{% url 'signup' %}" method="POST">
+          {% include 'includes/messages.html'%}
+          {% csrf_token %}
             <div class="mb-3 form">
               <label for="" class="form-label">Name</label>
-              <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="text" name="username" id="" class="form-control" placeholder="" aria-describedby="helpId" required>
               <small id="helpId" class="text-muted"></small>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
-                <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId" required>
                 <small id="helpId" class="text-muted"></small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Password</label>
-                <input type="email" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <input type="password" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId" required>
                 <small id="helpId" class="text-muted"></small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Confirm Password</label>
-                <input type="email" name="password confirm" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <input type="password" name="con" id="" class="form-control" placeholder="" aria-describedby="helpId" required>
                 <small id="helpId" class="text-muted"></small>
               </div>  
                <div class="form-check">
-                    <input class="form-check-input " type="checkbox" value="" id="" checked>
+                    <input class="form-check-input " type="checkbox"  name='check' value="" id="" checked required>
                     <label class="form-label" for="">
                       Agree to the terms
                     </label>
@@ -38,4 +39,8 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                
-     
+            </form> 
+        </div>
+{% endblock %}    
+ 
+ 
